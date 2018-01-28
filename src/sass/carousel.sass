@@ -1,0 +1,82 @@
+.slide-chunks-wrapper
+    margin: 0 auto
+    perspective: 600px
+    position: relative
+    .arrows
+        width: 50%
+        height: 500px
+        position: absolute
+        z-index: 100
+        overflow: hidden
+        &:before, &:after
+            display: block
+            content: ''
+            background-color: #999
+            width: 60px
+            height: 2px
+            position: absolute
+            border-radius: 2px
+            top: calc(50% - 2px)
+            transition: right .2s ease, left .2s ease
+        &:after
+            transform: rotate(65deg)
+        &:before
+            transform: rotate(-65deg)
+        &.left-arrow
+            left: 0
+            &:after, &:before
+                left: -80px
+                transform-origin: left
+            &:hover
+                background: linear-gradient(to left, #fff, #eee)
+                &:after, &:before
+                    left: 15px
+        &.right-arrow
+            right: 0
+            &:after, &:before
+                right: -80px
+                transform-origin: right       
+            &:hover
+                background: linear-gradient(to right, #fff, #eee)
+                &:after, &:before
+                    right: 15px
+    .slide-chunks
+        transform-style: preserve-3d
+        position: relative
+        z-index: 200
+        img
+            display: none
+        .slide-chunk
+            background-size: cover
+            display: inline-block
+            position: absolute 
+            top: 100px
+            right: calc(50% - 4.5px)
+            transition: transform 1s ease
+
+@media (max-width: 992px)
+    .slide-chunks-wrapper
+        .arrows
+            height: 350px
+            &:before, &:after
+                width: 40px
+        .slide-chunks
+            transform: scale(.7)
+
+@media (max-width: 768px)
+    .slide-chunks-wrapper
+        .arrows
+            height: 280px
+            &:before, &:after
+                width: 40px
+        .slide-chunks
+            transform: scale(.6)
+
+@media (max-width: 480px)
+    .slide-chunks-wrapper
+        .arrows
+            height: 190px
+            &:before, &:after
+                width: 30px
+        .slide-chunks
+            transform: scale(.4)

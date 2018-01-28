@@ -1,0 +1,36 @@
+{
+  "name": "carousel3d",
+  "version": "1.0.0",
+  "description": "This is my 3D carousel from scratch",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --env development",
+    "clean:lib": "rimraf lib",
+    "clean:dist": "rimraf dist",
+    "build": "npm run clean:lib && webpack --env production",
+    "example": "npm run clean:dist && webpack --env example",
+    "serve": "static dist",
+    "production": "npm run example && npm run serve"
+  },
+  "author": "Dmitriy Kondratenko <dmkndrtnk@gmail.com> (https://github.com/fanaticys)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "node-static": "^0.7.10",
+    "normalize.css": "^7.0.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.5",
+    "webpack-merge": "^4.1.1"
+  }
+}
