@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carousel 3D</title>
+<link href="./css/carousel-3d.css" rel="stylesheet"></head>
+<body>
+    <h1>3D Carousel</h1>
+
+    <div class="slide-chunks-wrapper">
+        <div class="slide-chunks">
+            <img src="img/6.jpg"> 
+            <img src="img/4.jpg">
+            <img src="img/5.jpg">
+            <img src="img/2.jpg">
+            <img src="img/7.jpg">
+            <img src="img/3.jpg">
+        </div>
+        <div class="arrows left-arrow">
+        </div>
+        <div class="arrows right-arrow">
+        </div>
+    </div>
+
+    <!-- start => Just for github page -->
+    <div class="content" style="text-align: center">
+        <form name="reinit" style="display: inline-block">
+            <label for="images-count">Images count: (1 - 6)</label>
+            <br>
+            <input id="images-count" name="count" type="number" required>
+            <br>
+            <label for="radius">Radius: (recomended: 100 and more)</label>
+            <br>
+            <input id="radius" name="radius" type="number" required>
+            <br>
+            <button>Reinit</button>
+        </form>
+    </div>
+    <!-- end => Just for github page -->
+<script type="text/javascript" src="js/carousel-3d.js"></script></body>
+</html>
